@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ia-51-bqY">
+                                <rect key="frame" x="194.5" y="94" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pns-OF-3Gd">
+                                <rect key="frame" x="194.5" y="265" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-PR-eSa">
+                                <rect key="frame" x="158" y="135" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qns-Y8-Bmy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz5-yB-enD">
+                                <rect key="frame" x="160.5" y="306" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSl-EE-cYj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pns-OF-3Gd" firstAttribute="centerX" secondItem="9ia-51-bqY" secondAttribute="centerX" id="38N-cS-ukI"/>
+                            <constraint firstItem="qg6-PR-eSa" firstAttribute="top" secondItem="9ia-51-bqY" secondAttribute="bottom" constant="20" id="AGd-zP-LJA"/>
+                            <constraint firstItem="9ia-51-bqY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOJ-V0-KrH"/>
+                            <constraint firstItem="Pns-OF-3Gd" firstAttribute="top" secondItem="qg6-PR-eSa" secondAttribute="bottom" constant="100" id="ICd-nN-od1"/>
+                            <constraint firstItem="Hz5-yB-enD" firstAttribute="centerX" secondItem="9ia-51-bqY" secondAttribute="centerX" id="PkG-zZ-ag5"/>
+                            <constraint firstItem="qg6-PR-eSa" firstAttribute="centerX" secondItem="9ia-51-bqY" secondAttribute="centerX" id="QLY-Hf-O7O"/>
+                            <constraint firstItem="Hz5-yB-enD" firstAttribute="top" secondItem="Pns-OF-3Gd" secondAttribute="bottom" constant="20" id="mEY-GN-o0u"/>
+                            <constraint firstItem="9ia-51-bqY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ywX-XL-yVF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="Pns-OF-3Gd" id="6ig-47-tnX"/>
+                        <outlet property="questionLabel" destination="9ia-51-bqY" id="UMt-Vk-281"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
